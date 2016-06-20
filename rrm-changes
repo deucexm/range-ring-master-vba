@@ -1,0 +1,21 @@
+Range Ring Master changelog
+last updated 2016-06-20 0318L
+
+Overview: Range Ring Master (hereafter 'RRM') outputs a complete Gibson-Ridge placefile based on input data.
+For TAF and RegionX groups, it takes the lat/long and plots a 120-sided polygon at ranges of 5 and 10 NM.
+Irregular shapes and lines are handled by using text saved in columns on one of the worksheets.
+
+TODO
+- More error handling
+
+1.1
+- Added Regions 4 through 6
+- Region strings now built based off cell contents instead of static values
+- User now warned if chosen filename exists and is asked whether to continue
+- Set Option Explicit
+- Renamed DBLegacy sheet -> DBLiteral
+- Condensed code via iteration over the region arrays with cUsedArrays collection
+- Avoided some iteration via Array = Range(), but created 2D arrays in the process; not sure of the optimal solution here
+
+1.0
+- Initial release
