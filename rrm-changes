@@ -1,5 +1,5 @@
 Range Ring Master changelog
-last updated 2016-06-20 0318L
+last updated 2016-06-25 0023L
 
 Overview: Range Ring Master (hereafter 'RRM') outputs a complete Gibson-Ridge placefile based on input data.
 For TAF and RegionX groups, it takes the lat/long and plots a 120-sided polygon at ranges of 5 and 10 NM.
@@ -7,6 +7,15 @@ Irregular shapes and lines are handled by using text saved in columns on one of 
 
 TODO
 - More error handling
+
+1.2
+- cUsedArrays set to nothing at end
+- aRegionX/aTAFs nuked, used collection instead after appending region/TAF as index 0 for each
+- Unnecessary declarations removed (sOtherX, aOtherX, etc.)
+- Checks for empty site database before FileSystemObject is opened
+- Site names now created by iterating through cUsedArrays
+- Current version and github repository link added to top of code module
+- OFF{} functions removed, WriteCircle formula adjusted to compensate for 0.4% horizontal variation
 
 1.1
 - Added Regions 4 through 6
